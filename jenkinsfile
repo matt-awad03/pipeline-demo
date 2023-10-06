@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 git 'https://github.com/matt-awad03/pipeline-demo.git'
-                sh 'mvn clean install'
+                sh 'mvn package'
             }
         }
         stage('Test') {
