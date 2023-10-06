@@ -1,0 +1,19 @@
+pipeline {
+    tools {
+        maven 'Maven 3.5.4'
+    }
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                git 'https://github.com/matt-awad03/pipeline-demo.git'
+                sh 'mvn test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+            }
+        }
+    }
+}
