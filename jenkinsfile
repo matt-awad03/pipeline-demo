@@ -24,7 +24,7 @@ pipeline {
             jacoco(
                 execPattern: '**/target/jacoco.exec',
                 classPattern: '**/build/classes',
-                sourcePattern: '**/src/main'
+                sourcePattern: '**/src/main/java'
             )
         }
     }
