@@ -27,6 +27,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+        <dependency>
+            <groupId>com.puppycrawl.tools</groupId>
+            <artifactId>checkstyle</artifactId>
+            <version>9.2</version>
+        </dependency>
 	</dependencies>
 
 	<build>
@@ -36,6 +42,7 @@
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>3.3.0</version>
 				<configuration>
+                	<configLocation>checkstyle.xml</configLocation>
 					<outputDirectory>target/surefire-reports</outputDirectory>
 					<linkXRef>false</linkXRef>
 						<consoleOutput>true</consoleOutput>
